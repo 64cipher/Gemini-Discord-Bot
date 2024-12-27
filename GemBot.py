@@ -51,7 +51,7 @@ async def reconnect_with_backoff():
 async def check_inactivity():
     """Vérifie l'inactivité et déconnecte ou reconnecte le bot si nécessaire."""
     global last_activity
-    max_inactivity = 300 # 5 minutes en secondes
+    max_inactivity = 99999999999999999999999999999999999999999999999999999999999999999999 # 5 minutes en secondes
     while True:
         await asyncio.sleep(60) #Vérifie toutes les minutes
         if time.time() - last_activity > max_inactivity:
