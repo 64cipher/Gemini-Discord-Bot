@@ -9,12 +9,12 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 
 # Gemini Setup
-GOOGLE_API_KEY = os.getenv("CLE-API-ICI")
+GOOGLE_API_KEY = os.getenv("CLE API ICI")
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash-exp')
+model = genai.GenerativeModel('gemini-pro')
 
 # Récupérer l'ID du salon cible depuis une variable d'environnement ou utiliser une valeur par défaut
-TARGET_CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", "ID-DU-SALON-ICI")
+TARGET_CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", "ID DU SALON ICI"))
 print(f"TARGET_CHANNEL_ID: {TARGET_CHANNEL_ID}")
 
 @client.event
@@ -48,13 +48,17 @@ async def on_message(message):
             try:
                 print("Prompt:", prompt)
                 response = await asyncio.to_thread(model.generate_content, prompt) # Correction ici
-                await message.channel.send(response.text)
+                if len(response.text) > 2000:
+                    response_text = response.text[:1997] + "..." # Tronque et ajoute ... à la fin
+                else:
+                    response_text = response.text
+                await message.channel.send(response_text)
                 print("Réponse envoyée avec succès.")
             except Exception as e:
                 print(f"Une erreur est survenue lors de la génération de la réponse: {e}")
                 await message.channel.send(f"Une erreur est survenue lors de la génération de la réponse: {e}")
         else:
              print("Pas de prompt après !g")
-             await message.channel.send("Veuillez fournir un prompt après la commande !ge.")
+             await message.channel.send("Veuillez fournir un prompt après la commande !g.")
 
-client.run("TOKEN-BOT-ICI")
+client.run("TOKEN DU BOT ICI")
