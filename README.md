@@ -7,7 +7,7 @@ simple bot avec Gemini
 
 ```pip install asyncio```
 
-Configurez le bot en mettant l'API Gemini, le token bot et l'ID du salon de votre serveur
+Configurez le bot en mettant l'API Gemini, le token bot et l'ID du salon de votre serveur dans le script GemBot.py
 
 ```python GemBot.py```
 
