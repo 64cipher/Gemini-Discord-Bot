@@ -7,4 +7,6 @@ Configurez le bot en mettant l'API Gemini, le token bot et l'ID du salon de votr
 
 ```python GemBot.py```
 
+utiliser la commande !g pour parler à Gemini sur le salon où il se trouve. 
+
 ![image](https://github.com/user-attachments/assets/775bb1ee-5984-4780-8a97-73a0e23ea936)
