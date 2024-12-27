@@ -11,7 +11,7 @@ client = discord.Client(intents=intents)
 # Gemini Setup
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-2.0-flash-exp')
 
 # Récupérer l'ID du salon cible depuis une variable d'environnement ou utiliser une valeur par défaut
 TARGET_CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", "ID DU SALON ICI"))
