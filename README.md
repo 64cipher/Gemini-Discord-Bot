@@ -1,11 +1,7 @@
 # Gemini-Discord-Bot
 simple bot avec Gemini
 
-```pip install discord```
-
-```pip install google.generativeai```
-
-```pip install asyncio```
+```pip install discord google.generativeai asyncio```
 
 Configurez le bot en mettant l'API Gemini, le token bot et l'ID du salon de votre serveur dans le script GemBot.py
 
