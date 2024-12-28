@@ -3,7 +3,7 @@ simple bot avec Gemini
 
 ```pip install discord google.generativeai asyncio```
 
-Configurez le bot en créant une variable d'environnement système avec GOOGLE_API_KEY en nom de variable et votre clé API Gemini en valeur. Modifier le token bot et l'ID du salon de votre serveur dans le script GemBot.py
+Configurez le bot en créant une variable d'environnement système avec GOOGLE_API_KEY en nom de variable et votre clé API Gemini en valeur. Modifier le token bot dans le script GemBot.py
 
 ```python GemBot.py```
 
